@@ -114,6 +114,11 @@ button = "right"
 action = "toggle_paused"
 
 [[block]]
+block = "kdeconnect"
+format = " $icon {$bat_charge $bat_icon |}{$notif_icon |}"
+bat_good = 101
+
+[[block]]
 block = "custom"
 command = "~/.config/i3/scripts/keyboard-layout"
 interval = 1
