@@ -51,22 +51,26 @@ if_command = "! [ \"$(df -P /home | awk 'NR==2 {print $1}')\" = \"$(df -P / | aw
 disk_drive = "\ue1b0"
 # # # # #
 
+# performance
+[[block]]
+block = "cpu"
+interval = 5
+format = " $utilization $icon "
+merge_with_next = true
+
 [[block]]
 block = "memory"
 format = " $mem_used_percents $icon "
 format_alt = " $mem_used/$mem_total $icon"
 interval = 5
-
-[[block]]
-block = "cpu"
-interval = 5
-format = " $utilization $icon "
+merge_with_next = true
 
 [[block]]
 block = "temperature"
 interval = 5
 format = " $average $icon "
 chip = "*-isa-*"
+# # # # #
 
 [[block]]
 block = "battery"
@@ -80,22 +84,21 @@ block = "bluetooth"
 mac = "D2:01:D1:C0:7C:55"
 disconnected_format = ""
 format = "{ $percentage|} $icon "
+
+# audio
 [[block]]
 block = "bluetooth"
 mac = "1A:2B:5B:FF:00:A3"
-disconnected_format = " $icon "
+disconnected_format = ""
 format = "{ $percentage|} $icon "
-
-# [[block]]
-# block = "net"
-# format = " $ssid $icon "
-# interval = 30
+merge_with_next = true
 
 [[block]]
 block = "sound"
 step_width = 2
 driver = "pulseaudio"
-format = " { $volume|} $icon "
+format = "{ $volume|} $icon "
+# # # # #
 
 [[block]]
 block = "time"
