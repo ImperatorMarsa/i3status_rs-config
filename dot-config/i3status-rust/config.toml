@@ -103,6 +103,9 @@ format = "{ $volume|} $icon "
 [[block]]
 block = "kdeconnect"
 format = " $icon {$bat_charge $bat_icon |}{$notif_icon |}"
+[block.icons_overrides]
+phone = "\uf879"
+phone_disconnected = "\uf3dd"
 
 [[block]]
 block = "custom"
