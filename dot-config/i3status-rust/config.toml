@@ -101,17 +101,6 @@ format = "{ $volume|} $icon "
 # # # # #
 
 [[block]]
-block = "notify"
-driver = "dunst"
-format = " $icon {$notification_count.eng(w:1) |}"
-[[block.click]]
-button = "left"
-action = "show"
-[[block.click]]
-button = "right"
-action = "toggle_paused"
-
-[[block]]
 block = "kdeconnect"
 format = " $icon {$bat_charge $bat_icon |}{$notif_icon |}"
 
@@ -124,3 +113,14 @@ interval = 1
 block = "time"
 interval = 60
 format = " $timestamp.datetime(f:'%a %d.%m %H:%M') $icon "
+
+[[block]]
+block = "notify"
+driver = "dunst"
+format = " $icon {$notification_count.eng(w:1) |}"
+[[block.click]]
+button = "left"
+action = "show"
+[[block.click]]
+button = "right"
+action = "toggle_paused"
