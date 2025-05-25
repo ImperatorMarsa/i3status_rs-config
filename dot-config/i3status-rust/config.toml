@@ -102,7 +102,7 @@ format = "{ $volume|} $icon "
 
 [[block]]
 block = "kdeconnect"
-format = " $icon {$bat_charge $bat_icon |}{$notif_icon |}"
+format = " $icon {$bat_charge $bat_icon |}{$notif_icon $notif_count |}"
 [block.icons_overrides]
 phone = "\uf879"
 phone_disconnected = "\uf3dd"
@@ -115,7 +115,7 @@ interval = 1
 [[block]]
 block = "time"
 interval = 60
-format = " $timestamp.datetime(f:'%a %d.%m %H:%M') $icon "
+format = " $timestamp.datetime(f:'%a %d.%m %H:%M') "
 
 [[block]]
 block = "notify"
