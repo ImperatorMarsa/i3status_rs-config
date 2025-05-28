@@ -1,0 +1,9 @@
+#!/bin/bash
+
+CURRENT_LAYOUT=$(setxkbmap -query | grep layout | sed 's/,\w\+//gi' | awk '{print $2}')
+
+if [ "$CURRENT_LAYOUT" = "us" ]; then
+  echo "🇺🇸"
+else
+  echo "🇷🇺"
+fi

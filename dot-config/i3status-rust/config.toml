@@ -109,8 +109,11 @@ phone_disconnected = "\uf3dd"
 
 [[block]]
 block = "custom"
-command = "~/.config/i3/scripts/keyboard-layout"
+command = "~/.config/i3status-rust/scripts/keyboard-layout"
 interval = 1
+[[block.click]]
+button = "left"
+cmd = "bash ~/.config/i3/scripts/layout_switch"
 
 [[block]]
 block = "time"
