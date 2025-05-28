@@ -2,8 +2,8 @@
 
 send_notification() {
     TODAY=$(date '+%-d')
-    HEAD=$(cal "$1" | head -n1)
-    BODY=$(cal "$1" | tail -n7 | sed -z "s|$TODAY|<u><b>$TODAY</b></u>|1")
+    HEAD=$(cal -m "$1" | head -n1)
+    BODY=$(cal -m "$1" | tail -n7 | sed -z "s|$TODAY|<u><b>$TODAY</b></u>|1")
     dunstify \
         --appname "calendar 󰸗" \
         --hints string:x-canonical-private-synchronous:calendar \
